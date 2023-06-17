@@ -1,0 +1,5 @@
+npm init -y 
+npm i dotenv express openai cors 
+
+Criar arq .env e as chaves OPEN_AI_KEY="" e PORT=5555
+criar .gitignore e colocar : node_modules, .env
