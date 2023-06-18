@@ -1,10 +1,12 @@
 const express = require("express");
 const promptController = require("../controllers/prompt-controller");
 
-const routes = express.Router();
+const router = express.Router();
 
-routes.post("api/prompt", promptController.sendText);
-console.log("routes");
+router.post("/api/prompt", promptController.sendText);
 
+router.get("/api/test", (req, res) => {
+  return res.status(200).json({ message: "Test route is working!" });
+});
 
-module.exports = routes;
+module.exports = router;
