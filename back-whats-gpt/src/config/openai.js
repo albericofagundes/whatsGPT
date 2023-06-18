@@ -8,7 +8,8 @@ module.exports = class openai {
     return new OpenAIApi(configuration);
   }
 
-  static textCompletion({ prompt }) {
+  static textCompletion( prompt ) {
+    console.log("openai prompt", prompt);
     return {
       model: "gpt-3.5-turbo-16k",
       prompt: `${prompt}`,
